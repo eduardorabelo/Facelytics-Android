@@ -11,7 +11,7 @@ Facelytics is an SDK allowing mobile and embedded apps to detect face criterias 
 1. Download the [latest code version](https://github.com/wassafr/Facelytics-Android/archive/master.zip).
 2. Drag and drop the **armeabi-v7a** directory from the archive in your project navigator under **libs**.
 3. Drag and drop the **wassa** directory from the archive in your project navigator under **assets**.
-4. Drag and drop the **wassa-Facelytics-<version>.jar** from the archive in your project navigator under **libs** and include it in built-path.
+4. Drag and drop the **wassa-facelytics-(version).jar** from the archive in your project navigator under **libs** and include it in built-path.
 
 ## Usage
 
