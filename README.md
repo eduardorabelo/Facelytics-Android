@@ -2,10 +2,6 @@
 
 Facelytics is an SDK allowing mobile apps to detect face criterias of people by analyzing the front video feed in realtime. Facelytics is able to track multiple faces and then detect gender, some emotions, age range and accessories, for each detected face. For more [informations](http://face-lytics.com). You can download a sample application on the [Google Play Store](https://play.google.com/store/apps/details?id=com.wassa.whatsthatface.demo) to see usage exemples for the sdk
 
-# CaptchaFace
-
-Facelytics is an SDK allowing mobile and embedded apps to detect face criterias of people located in front of a camera, by analyzing the video feed in realtime.
-
 ## Installation
 
 1. Download the [latest code version](https://github.com/wassafr/Facelytics-Android/archive/master.zip).
