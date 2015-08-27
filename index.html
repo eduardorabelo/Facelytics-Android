@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Facelytics-android by wassafr</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Facelytics-android</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/wassafr/Facelytics-Android">View the Project on GitHub <small>wassafr/Facelytics-Android</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/wassafr/Facelytics-Android/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/wassafr/Facelytics-Android/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/wassafr/Facelytics-Android">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>®# CaptchaFace</p>
+
+<p>Facelytics is an SDK allowing mobile and embedded apps to detect face criterias of people located in front of a camera, by analyzing the video feed in realtime.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>Download the <a href="https://github.com/wassafr/Facelytics-Android/archive/master.zip">latest code version</a>.</li>
+<li>Drag and drop the <strong>armeabi-v7a</strong> directory from the archive in your project navigator under <strong>libs</strong>.</li>
+<li>Drag and drop the <strong>wassa</strong> directory from the archive in your project navigator under <strong>assets</strong>.</li>
+<li>Drag and drop the <strong>wassa-Facelytics-.jar</strong> from the archive in your project navigator under <strong>libs</strong> and include it in built-path.</li>
+</ol>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>To run the example project, clone the repo.</p>
+
+<p>Make sure you also see <a href="http://www.face-lytics.com">CaptchaFace documentation</a>.</p>
+
+<h3>
+<a id="basics" class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h3>
+
+<ol>
+<li>
+<p>Add the following code to your <strong>AndroidManifest.xml</strong> </p>
+
+<div class="highlight highlight-xml"><pre>
+    &lt;<span class="pl-ent">uses-permission</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.CAMERA<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">uses-permission</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.READ_EXTERNAL_STORAGE<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">uses-permission</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.INTERNET<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">uses-permission</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.ACCESS_NETWORK_STATE<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> /&gt;
+
+    &lt;<span class="pl-ent">uses-feature</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.hardware.camera<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">uses-feature</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.hardware.camera.autofocus<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">uses-feature</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.hardware.camera.front<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">uses-feature</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.hardware.camera.front.autofocus<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">required</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> /&gt;
+</pre></div>
+</li>
+<li>
+<p>Plugin and files loading - Add the following line to your <strong>Application.java</strong> , onCreate()</p>
+
+<div class="highlight highlight-java"><pre>
+    <span class="pl-smi">FacelyticsUtils</span><span class="pl-k">.</span>loadPlugin(<span class="pl-v">this</span>);
+</pre></div>
+</li>
+<li>
+<p>Render - Add the following line to your <strong>layout_activity.xml</strong></p>
+
+<div class="highlight highlight-xml"><pre>
+    &lt;<span class="pl-ent">com</span>.wassa.noyau.capture.input.KFrameRender
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/render<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span> /&gt;
+</pre></div>
+</li>
+<li>
+<p>Allow "Keep Screen ON" - Add the following line to your onCreate.</p>
+
+<div class="highlight highlight-java"><pre>
+    <span class="pl-c">// this.setContentView(your_layout_activity.xml);</span>
+    <span class="pl-v">this</span><span class="pl-k">.</span>getWindow()<span class="pl-k">.</span>addFlags(<span class="pl-smi">WindowManager</span><span class="pl-k">.</span><span class="pl-smi">LayoutParams</span><span class="pl-c1"><span class="pl-k">.</span>FLAG_KEEP_SCREEN_ON</span>);
+</pre></div>
+</li>
+<li>
+<p>Setup your first Facelytics service - Add the following code to your onResume()</p>
+
+<div class="highlight highlight-java"><pre>
+    <span class="pl-k">if</span> (<span class="pl-k">!</span><span class="pl-smi">FacelyticsUtils</span><span class="pl-k">.</span>isInit()) 
+    {
+        <span class="pl-smi">FacelyticsCameraServiceNative</span> newService <span class="pl-k">=</span> (<span class="pl-smi">FacelyticsCameraServiceNative</span>) <span class="pl-smi">FacelyticsUtils</span><span class="pl-k">.</span>createInstance(
+            <span class="pl-k">new</span> <span class="pl-smi">FacelyticsCameraServiceNative</span>(<span class="pl-k">&lt;</span>context<span class="pl-k">&gt;</span>, <span class="pl-k">&lt;</span>config_file<span class="pl-k">&gt;</span>, <span class="pl-k">&lt;</span>licence_key<span class="pl-k">&gt;</span>));
+        newService<span class="pl-k">.</span>setRenderToMat(<span class="pl-c1">true</span>);
+        newService<span class="pl-k">.</span>load(<span class="pl-smi">KInputCamId</span><span class="pl-c1"><span class="pl-k">.</span>CAMERA_ID_FRONT</span>);
+    }
+</pre></div>
+
+<div class="highlight highlight-java"><pre>
+    <span class="pl-k">final</span> <span class="pl-smi">FacelyticsCameraServiceNative</span> service <span class="pl-k">=</span> (<span class="pl-smi">FacelyticsCameraServiceNative</span>) <span class="pl-smi">FacelyticsUtils</span><span class="pl-k">.</span>getInstance();
+</pre></div>
+
+<div class="highlight highlight-java"><pre>
+    service<span class="pl-k">.</span>addOnEventListener(nnew OnFaceListener() {
+        @<span class="pl-smi">Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> onEvent(<span class="pl-smi">String</span> rawEvent) throws <span class="pl-smi">JSONException</span> {
+            <span class="pl-v">super</span><span class="pl-k">.</span>onEvent(rawEvent);
+            <span class="pl-c">// Do something...</span>
+        }
+    });
+</pre></div>
+</li>
+<li>
+<p>Start the record and the preview</p>
+
+<div class="highlight highlight-java"><pre>
+    service<span class="pl-k">.</span>record(<span class="pl-smi">MyActivity</span><span class="pl-k">.</span><span class="pl-v">this</span>, (<span class="pl-smi">KFrameRender</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>render), <span class="pl-c1">true</span>, <span class="pl-c1">true</span>);
+</pre></div>
+</li>
+</ol>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>Eclipse 4.3+</li>
+<li>Android SDK 14+</li>
+<li>armeabi-v7a</li>
+</ul>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Wassa, <a href="mailto:contact@wassa.fr">contact@wassa.fr</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/wassafr">wassafr</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
