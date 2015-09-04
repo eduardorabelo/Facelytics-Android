@@ -13,7 +13,7 @@ Facelytics is an SDK allowing mobile apps to detect face criterias of people by 
 
 To run the example project, clone the repo.
 
-Make sure you also see [Facelytics documentation](http://www.face-lytics.com).
+Make sure you also see [Facelytics documentation](http://wassafr.github.io/Facelytics-Android/wassa-facelytics-jdoc/).
 
 ###Basics
 1. Add the following code to your **AndroidManifest.xml** 
