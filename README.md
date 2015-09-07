@@ -115,7 +115,7 @@ Make sure you also see :
 				// getEvent().getFDetectByPassed() <-- Amount of face detect thread by passed
 				
 				// #2 - More information available with FacelyticsFaceEvent
-				 FacelyticsFaceEvent faceEvent = (FacelyticsFaceEvent) getEvent();
+				// FacelyticsFaceEvent faceEvent = (FacelyticsFaceEvent) getEvent();
 				
 				// #3 - Retrieve basis face information
 				// faceEvent.getFacesCount() <-- Detected faces count
