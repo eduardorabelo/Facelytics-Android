@@ -48,7 +48,16 @@
 
 <p>To run the example project, clone the repo.</p>
 
-<p>Make sure you also see <a href="http://wassafr.github.io/Facelytics-Android/wassa-facelytics-jdoc/">Facelytics documentation</a>.</p>
+<p>Make sure you also see :</p>
+
+<ul>
+<li>
+<a href="http://wassafr.github.io/Facelytics-Android/wassa-facelytics-jdoc/">Facelytics documentation</a>.</li>
+<li>
+<a href="https://github.com/wassafr/Facelytics-Android/tree/master/sample/Sample-Eclipse/">Facelytics Sample - Eclipse</a>.</li>
+<li>
+<a href="https://github.com/wassafr/Facelytics-Android/tree/master/sample/Sample-AndroidStudio/">Facelytics Sample - Android Studio</a>.</li>
+</ul>
 
 <h3>
 <a id="basics" class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h3>
@@ -86,7 +95,7 @@
 </pre></div>
 </li>
 <li>
-<p>Plugin and files loading - Add the following line to your <strong>Application.java</strong> , onCreate()</p>
+<p>Plugin and files loading - Add the following line to your <strong>Application.java</strong> or <strong>MainActiviy.java</strong> , onCreate()</p>
 
 <div class="highlight highlight-java"><pre>
     <span class="pl-smi">FacelyticsUtils</span><span class="pl-k">.</span>loadPlugin(<span class="pl-v">this</span>);
@@ -133,6 +142,32 @@
         <span class="pl-k">public</span> <span class="pl-k">void</span> onEvent(<span class="pl-smi">String</span> rawEvent) throws <span class="pl-smi">JSONException</span> {
             <span class="pl-v">super</span><span class="pl-k">.</span>onEvent(rawEvent);
             <span class="pl-c">// Do something...</span>
+
+            <span class="pl-c">// #1 - Retrieve basis information</span>
+            <span class="pl-c">// getEvent().getTimestamp() &lt;-- Timestamp event</span>
+            <span class="pl-c">// getEvent().getFrameWidth() &lt;-- captured frame width</span>
+            <span class="pl-c">// getEvent().getFrameHeight() &lt;-- captured frame width</span>
+            <span class="pl-c">// getEvent().getFDetectTime() &lt;-- Time to process a simple face detection</span>
+            <span class="pl-c">// getEvent().getFDetectNextTick() &lt;-- Time to wait before the next face detection</span>
+            <span class="pl-c">// getEvent().getFDetectByPassed() &lt;-- Amount of face detect thread by passed</span>
+
+            <span class="pl-c">// #2 - More information available with FacelyticsFaceEvent</span>
+            <span class="pl-c">// FacelyticsFaceEvent faceEvent = (FacelyticsFaceEvent) getEvent();</span>
+
+            <span class="pl-c">// #3 - Retrieve basis face information</span>
+            <span class="pl-c">// faceEvent.getFacesCount() &lt;-- Detected faces count</span>
+            <span class="pl-c">// faceEvent.getFace(_index) &lt;-- Return a Face object at specified index</span>
+            <span class="pl-c">// faceEvent.getFaceId(_index) &lt;-- Return id of a face at specified index</span>
+            <span class="pl-c">// faceEvent.getFaces(); &lt;-- Return an array of detected faces</span>
+
+            <span class="pl-c">// #4 - Retrieve advanced face information at specified index</span>
+            <span class="pl-c">// faceEvent.getPosition(_index)</span>
+            <span class="pl-c">// Eyes eyes = faceEvent.getEyes(_index)</span>
+            <span class="pl-c">// Age age = faceEvent.getAge(_index)</span>
+            <span class="pl-c">// Emotion emotion = faceEvent.getEmotion(_index)</span>
+            <span class="pl-c">// Gender gender = faceEvent.getGender(_index)</span>
+            <span class="pl-c">// Glass glass = faceEvent.getGlass(_index)</span>
+            <span class="pl-c">// Motion motion = faceEvent.getMotion(_index)</span>
         }
     });
 </pre></div>
