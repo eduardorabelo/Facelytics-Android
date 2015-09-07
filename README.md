@@ -13,7 +13,10 @@ Facelytics is an SDK allowing mobile apps to detect face criterias of people by 
 
 To run the example project, clone the repo.
 
-Make sure you also see [Facelytics documentation](http://wassafr.github.io/Facelytics-Android/wassa-facelytics-jdoc/).
+Make sure you also see :
+- [Facelytics documentation](http://wassafr.github.io/Facelytics-Android/wassa-facelytics-jdoc/).
+- [Facelytics Sample - Eclipse](https://github.com/wassafr/Facelytics-Android/tree/master/sample/Sample-Eclipse/).
+- [Facelytics Sample - Android Studio](https://github.com/wassafr/Facelytics-Android/tree/master/sample/Sample-AndroidStudio/).
 
 ###Basics
 1. Add the following code to your **AndroidManifest.xml** 
@@ -49,7 +52,7 @@ Make sure you also see [Facelytics documentation](http://wassafr.github.io/Facel
     ```
 
 
-2. Plugin and files loading - Add the following line to your **Application.java** , onCreate()
+2. Plugin and files loading - Add the following line to your **Application.java** or **MainActiviy.java** , onCreate()
 
     ```java
     
@@ -102,6 +105,32 @@ Make sure you also see [Facelytics documentation](http://wassafr.github.io/Facel
 			public void onEvent(String rawEvent) throws JSONException {
 				super.onEvent(rawEvent);
 				// Do something...
+				
+				// #1 - Retrieve basis information
+				// getEvent().getTimestamp() <-- Timestamp event
+				// getEvent().getFrameWidth() <-- captured frame width
+				// getEvent().getFrameHeight() <-- captured frame width
+				// getEvent().getFDetectTime() <-- Time to process a simple face detection
+				// getEvent().getFDetectNextTick() <-- Time to wait before the next face detection
+				// getEvent().getFDetectByPassed() <-- Amount of face detect thread by passed
+				
+				// #2 - More information available with FacelyticsFaceEvent
+				 FacelyticsFaceEvent faceEvent = (FacelyticsFaceEvent) getEvent();
+				
+				// #3 - Retrieve basis face information
+				// faceEvent.getFacesCount() <-- Detected faces count
+				// faceEvent.getFace(_index) <-- Return a Face object at specified index
+				// faceEvent.getFaceId(_index) <-- Return id of a face at specified index
+				// faceEvent.getFaces(); <-- Return an array of detected faces
+				
+				// #4 - Retrieve advanced face information at specified index
+				// faceEvent.getPosition(_index)
+				// Eyes eyes = faceEvent.getEyes(_index)
+				// Age age = faceEvent.getAge(_index)
+				// Emotion emotion = faceEvent.getEmotion(_index)
+				// Gender gender = faceEvent.getGender(_index)
+				// Glass glass = faceEvent.getGlass(_index)
+				// Motion motion = faceEvent.getMotion(_index)
 			}
 		});
         
