@@ -8,9 +8,9 @@
 /*.log
 /assets/crashlytics-build.properties
 /res/values/com_crashlytics_export_strings.xml
-/libs/wassa-*.jar
-/libs/armeabi/*.so
-/libs/armeabi-v7a/*.so
-/assets/wassa/*.zip
+#/libs/wassa-*.jar
+#/libs/armeabi/*.so
+#/libs/armeabi-v7a/*.so
+#/assets/wassa/*.zip
 /build/*
 /deploy/*
