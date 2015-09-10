@@ -13,18 +13,18 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.wassa.facelytics.all.FacelyticsCameraServiceNative;
+import com.wassa.facelytics.all.FacelyticsUtils;
+import com.wassa.facelytics.common.FacelyticsConfigActivity;
+import com.wassa.facelytics.common.FacelyticsService;
+import com.wassa.facelytics.common.FacelyticsServiceNative.SessionEndedListener;
+import com.wassa.facelytics.events.FacelyticsEvent;
+import com.wassa.facelytics.events.FacelyticsFaceEvent;
+import com.wassa.facelytics.events.FacelyticsFaceEvent.Gender;
+import com.wassa.facelytics.events.FacelyticsFaceEvent.Position;
+import com.wassa.facelytics.events.OnEventListener;
+import com.wassa.facelytics.events.OnFaceListener;
 import com.wassa.noyau.capture.input.KFrameRender;
-import com.wassa.whatsthatface.all.FacelyticsCameraServiceNative;
-import com.wassa.whatsthatface.all.FacelyticsUtils;
-import com.wassa.whatsthatface.common.FacelyticsConfigActivity;
-import com.wassa.whatsthatface.common.FacelyticsService;
-import com.wassa.whatsthatface.common.FacelyticsServiceNative.SessionEndedListener;
-import com.wassa.whatsthatface.events.FacelyticsEvent;
-import com.wassa.whatsthatface.events.FacelyticsFaceEvent;
-import com.wassa.whatsthatface.events.FacelyticsFaceEvent.Gender;
-import com.wassa.whatsthatface.events.FacelyticsFaceEvent.Position;
-import com.wassa.whatsthatface.events.OnEventListener;
-import com.wassa.whatsthatface.events.OnFaceListener;
 
 public class SampleActivity extends Activity {
 

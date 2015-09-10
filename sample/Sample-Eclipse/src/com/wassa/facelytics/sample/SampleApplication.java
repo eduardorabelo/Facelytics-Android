@@ -5,13 +5,13 @@ import java.util.Map;
 import android.app.Application;
 import android.content.Context;
 
+import com.wassa.facelytics.all.FacelyticsCameraServiceNative;
+import com.wassa.facelytics.all.FacelyticsUtils;
+import com.wassa.facelytics.common.FacelyticsServiceNative.SessionEndedListener;
+import com.wassa.facelytics.events.OnEventListener;
+import com.wassa.facelytics.wrapper.WData.DrawingQuality;
 import com.wassa.noyau.capture.input.KInputCamId;
 import com.wassa.noyau.debug.KLog;
-import com.wassa.whatsthatface.all.FacelyticsCameraServiceNative;
-import com.wassa.whatsthatface.all.FacelyticsUtils;
-import com.wassa.whatsthatface.common.FacelyticsServiceNative.SessionEndedListener;
-import com.wassa.whatsthatface.events.OnEventListener;
-import com.wassa.whatsthatface.wrapper.WData.DrawingQuality;
 
 public class SampleApplication extends Application {
 
