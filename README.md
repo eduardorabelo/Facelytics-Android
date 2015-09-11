@@ -156,7 +156,7 @@ Make sure you also see :
 
 ## Requirements
 
-* Eclipse 4.3+
+* Eclipse or AndroidStudio
 * Android SDK 14+
 * armeabi-v7a
 
