@@ -52,7 +52,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wassa.whatsthatface.common.WTFConfigActivity" />
+        <activity android:name="com.wassa.facelytics.common.FacelyticsConfigActivity" />
     </application>
 
 </manifest>

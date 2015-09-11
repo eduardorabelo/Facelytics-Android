@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-5884bf161b351275833f43455f60e180551d9e39.jar" />
+    </item>
+    <item
+        jar="/common/android-sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fd17a33c6009a75b170b89beea2de5750d44526a.jar" />
+    </item>
+    <item
+        jar="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/libs/wassa-facelytics-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="07db5822b7d4c50bb4be96f0b334233bafabd22a">
+        <dex dex="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/build/intermediates/pre-dexed/debug/wassa-facelytics-2.4.0-500e71071bfd0beb0285c241e9c22e551a1cacc9.jar" />
+    </item>
+    <item
+        jar="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/aagostini/Documents/repo_git/wassa-proto-rd-android/Facelytics-Sample-AndroidStudio/app/build/intermediates/pre-dexed/debug/classes-b0fba16010c2363b7104186b25ef12dbd3ef54bc.jar" />
+    </item>
+
+</items>

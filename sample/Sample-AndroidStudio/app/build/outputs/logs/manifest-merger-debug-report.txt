@@ -107,7 +107,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:34:17
 	android:name
 		ADDED from AndroidManifest.xml:34:27
-activity#com.wassa.whatsthatface.common.WTFConfigActivity
+activity#com.wassa.facelytics.common.FacelyticsConfigActivity
 ADDED from AndroidManifest.xml:37:9
 	android:name
 		ADDED from AndroidManifest.xml:37:19
