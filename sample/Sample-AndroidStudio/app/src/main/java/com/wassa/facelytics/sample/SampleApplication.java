@@ -5,6 +5,7 @@ import java.util.Map;
 import android.app.Application;
 import android.content.Context;
 
+import com.wassa.noyau.capture.input.KBaseRotation;
 import com.wassa.noyau.capture.input.KInputCamId;
 import com.wassa.noyau.debug.KLog;
 import com.wassa.facelytics.all.FacelyticsCameraServiceNative;
@@ -83,6 +84,10 @@ public class SampleApplication extends Application {
 		newService.getInputConfig().timer = 1;
 		newService.getInputConfig().maxWidth = 550;
 		newService.getInputConfig().maxHeight = 550;
+
+		// WILL FORCE TO ROTATE CAMERA INPUT (Before process)
+		newService.getInputConfig().baseRotate = KBaseRotation.ROT_90.getValue();
+
 		return newService;
 	}
 	

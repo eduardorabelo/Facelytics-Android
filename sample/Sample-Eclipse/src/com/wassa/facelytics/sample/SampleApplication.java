@@ -10,6 +10,7 @@ import com.wassa.facelytics.all.FacelyticsUtils;
 import com.wassa.facelytics.common.FacelyticsServiceNative.SessionEndedListener;
 import com.wassa.facelytics.events.OnEventListener;
 import com.wassa.facelytics.wrapper.WData.DrawingQuality;
+import com.wassa.noyau.capture.input.KBaseRotation;
 import com.wassa.noyau.capture.input.KInputCamId;
 import com.wassa.noyau.debug.KLog;
 
@@ -63,7 +64,6 @@ public class SampleApplication extends Application {
 		}
 	}
 	
-	
 	public static FacelyticsCameraServiceNative initService_4_SampleActivity(Context _ctx, OnEventListener<?> _onEvent, SessionEndedListener _onEnded) {
 		FacelyticsCameraServiceNative newService = initService(
 				_ctx,  
@@ -83,6 +83,10 @@ public class SampleApplication extends Application {
 		newService.getInputConfig().timer = 1;
 		newService.getInputConfig().maxWidth = 550;
 		newService.getInputConfig().maxHeight = 550;
+		
+		// WILL FORCE TO ROTATE CAMERA INPUT (Before process)
+		// newService.getInputConfig().baseRotate = KBaseRotation.ROT_90.getValue();
+		
 		return newService;
 	}
 	
