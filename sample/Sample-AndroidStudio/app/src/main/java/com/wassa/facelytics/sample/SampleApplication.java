@@ -85,9 +85,19 @@ public class SampleApplication extends Application {
 		newService.getInputConfig().maxWidth = 550;
 		newService.getInputConfig().maxHeight = 550;
 
-		// WILL FORCE TO ROTATE CAMERA INPUT (Before process)
-		newService.getInputConfig().baseRotate = KBaseRotation.ROT_90.getValue();
-
+        // ** You may want to tweak camera param :
+        // * Will force programmatically captured frame
+        // newService.getInputConfig().baseRotate = KBaseRotation.ROT_90.getValue();
+        // * Will disable the auto rotate display
+        // newService.getInputConfig().autoRotate = false;
+        // * Will allow to do want you want on the camera
+        //	newService.getInputConfig().cameraParam = new OnCameraParam() {
+        //		@Override
+        //		public void customSet(Camera arg0, Parameters arg1) {
+        //			// ...
+        //		}
+        //	};
+        
 		return newService;
 	}
 	
