@@ -1,12 +1,19 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wassa.facelytics.sample.SampleActivity" >
-
-    <com.wassa.noyau.capture.input.KFrameRender
-        android:id="@+id/render"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+    android:orientation="vertical" >
     
-</RelativeLayout>
+	<Button 
+	    android:id="@+id/bt_camera"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Camera example"/>
+	
+	<Button 
+	    android:id="@+id/bt_bitmap"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Bitmap example"/>
+    
+</LinearLayout>
